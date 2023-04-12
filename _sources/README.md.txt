@@ -15,7 +15,7 @@
         -   De testat comanda `docker-compose` / `docker compose`
     - [Sqlite Browser](https://sqlitebrowser.org/dl/)
         -   De downloadat din sectiunea <b>Linux</b>, pachetul AppImage si pus pe desktop
-        -   De rulat comanda `chmod +x <fisier>.AppImage` si apoi `<fisier>.AppImage`
+        -   De rulat comanda `chmod +x <fisier>.AppImage` si apoi `./<fisier>.AppImage`
     - [VSCode](https://code.visualstudio.com/docs/setup/linux)
         -   De rulat comenzile pana la sectiunea <b>RHEL, Fedora and CentOS</b>
 
@@ -25,6 +25,11 @@
     -   Acestea contin un framework de creare a API-urilor, de conectare la o baza de date si serverul care ruleaza API-ul
 
 -   De downloadat datasetul [Iris](https://gist.github.com/netj/8836201) si procesat astfel incat campul `Variety` sa devina din string in numeric (folosind <b>pandas</b>)
+    -   Pasi:
+        -   Importare <b>pandas</b> `import pandas as pd`
+        -   Citire dataset `dataset=pd.read_csv("path_to_dataset.csv", index_col=False)`
+        -   Transformare `dataset['class] = dataset['variety].replace({"Setosa": 0, "Versicolor": 1, <to_be_completed>})`
+        -   Salvare dataset `dataset.to_csv("path_to_dataset.csv")`
 
 -   Framework-ul pentru API este numit [FastAPI](https://fastapi.tiangolo.com/) 
 -   De urmarit si implementat tutorialul de pe site-ul lor -> [Tutorial](https://fastapi.tiangolo.com/tutorial/first-steps/)
@@ -38,7 +43,8 @@
         -   DeleteFlower(by id)
         -   UpdateFlower(by id)
 
--   De modificat fisierul `db/init_db.py` pentru a incarca datele in baza de date (folosind functiile de CRUD)
+-   De modificat fisierul `./db/init_db.py` pentru a incarca datele in baza de date (folosind functiile de CRUD)
+    -   <b>Tip:</b> Pentru a genera baza de date trebuie rulat scriptul `init_db.py`
     -   Optional de verificat cu <b>Sqlite Browser</b> daca s-au incarcat datele
     -   Optional de incarcat date si cu request-uri
 
