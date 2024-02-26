@@ -82,6 +82,12 @@
 </ul>
 </li>
 <li><p>De downloadat datasetul <a class="reference external" href="https://gist.github.com/netj/8836201">Iris</a> si procesat astfel incat campul <code class="docutils literal notranslate"><span class="pre">Variety</span></code> sa devina din string in numeric (folosind <b>pandas</b>)</p></li>
+<ul>
+  <li><p>Importare <b>pandas</b> `import pandas as pd`</p></li>
+  <li><p>Citire dataset `dataset=pd.read_csv("path_to_dataset.csv", index_col=False)` (se inlocuieste `path_to_dataset.csv` cu calea voastra catre fisierul csv)</p></li>
+  <li><p>Transformare `dataset['class'] = dataset['variety'].replace({"Setosa": 0, "Versicolor": 1, <to_be_completed>})`</p></li>
+  <li><p> Salvare dataset `dataset.to_csv("path_to_dataset.csv")`</p></li>
+  </ul>
 <li><p>Framework-ul pentru API este numit <a class="reference external" href="https://fastapi.tiangolo.com/">FastAPI</a></p></li>
 <li><p>De urmarit si implementat tutorialul de pe site-ul lor -&gt; <a class="reference external" href="https://fastapi.tiangolo.com/tutorial/first-steps/">Tutorial</a></p></li>
 <li><p>De creat <a class="reference external" href="https://fastapi.tiangolo.com/tutorial/sql-databases/#crud-utils">CRUD</a> Endpoints + <a class="reference external" href="https://fastapi.tiangolo.com/tutorial/extra-models/">Model</a> + DB <a class="reference external" href="https://github.com/marshmallow-code/marshmallow-sqlalchemy">Schema</a> pentru flori (sepal_length, sepal_width, petal_length, petal_width, class)</p>
@@ -97,14 +103,6 @@
 <li><p>UpdateFlower(by id)</p></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><p>Fisierul <code class="docutils literal notranslate"><span class="pre">./db/init_db.py</span></code> importa tabelele, modelele si creaza conexiuna cu baza de date pentru a instantia toate tabelele.</p></li>
-<li><p>Fisierul <code class="docutils literal notranslate"><span class="pre">./db/database.py</span></code> creaza sesiunea locala cu baza de date pentru a putea face operatii asupra ei</p></li>
-<li><p>De modificat fisierul <code class="docutils literal notranslate"><span class="pre">./db/init_db.py</span></code> pentru a incarca datele in baza de date (folosind functiile de CRUD)</p>
-<ul>
-<li><p>Optional de verificat cu <b>Sqlite Browser</b> daca s-au incarcat datele</p></li>
-<li><p>Optional de incarcat date si cu request-uri</p></li>
 </ul>
 </li>
 <li><p>De testat endpoint-urile folosind <a class="reference external" href="http://localhost:8000/docs">Swagger</a></p></li>
@@ -136,7 +134,7 @@
 <div class="section" id="docker-compose">
 <h2>Docker Compose<a class="headerlink" href="#docker-compose" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><p>De creat <a class="reference external" href="https://github.com/vladutdinu/AstroSwipe/blob/main/dev-ops/docker-compose.yaml">fisierul</a> <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code></p>
+<li><p>De creat <a class="reference external" href="https://github.com/docker/awesome-compose/tree/master/fastapi">fisierul</a> <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code></p>
 <ul>
 <li><p>Se creaza configuratia pentru containerul de API</p></li>
 <li><p>Se creaza network</p></li>

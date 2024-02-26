@@ -43,11 +43,6 @@
         -   DeleteFlower(by id)
         -   UpdateFlower(by id)
 
--   De modificat fisierul `./db/init_db.py` pentru a incarca datele in baza de date (folosind functiile de CRUD)
-    -   <b>Tip:</b> Pentru a genera baza de date trebuie rulat scriptul `init_db.py`
-    -   Optional de verificat cu <b>Sqlite Browser</b> daca s-au incarcat datele
-    -   Optional de incarcat date si cu request-uri
-
 -   De testat endpoint-urile folosind [Swagger](http://localhost:8000/docs)
 
 ## Docker
@@ -65,14 +60,13 @@
 -   De identificat problemele existente si cum le putem rezolva
 
 ## Docker Compose
--   De creat [fisierul](https://github.com/vladutdinu/AstroSwipe/blob/main/dev-ops/docker-compose.yaml) `docker-compose.yaml`
+-   De creat [fisierul](https://github.com/docker/awesome-compose/tree/master/fastapi) `docker-compose.yaml`
     -   Se creaza configuratia pentru containerul de API
     -   Se creaza network
     -   Se creaza volum local
     -   Se expuna portul
     -   Se rezolva problemele legate de rularea simpla a containerului (de discutat)
 -   Se porneste configuratia din `docker-compose` cu `docker-compose up` (de gasit si flag-uri care pot fi folosite)
-
 
 ## Machine Learning
 ### Descriere
